@@ -29,7 +29,7 @@ SIKULI_EXIT=$?
 
 echo "Finished sikulix"
 
-set +e +pipefail
+set e pipefail
 killall qemu-system-x86_64 || /bin/true
 
 exit $SIKULI_EXIT

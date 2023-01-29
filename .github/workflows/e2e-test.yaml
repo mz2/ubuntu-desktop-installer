@@ -10,7 +10,7 @@ on:
 
 defaults:
   run:
-    shell: sh
+    shell: bash
     working-directory: test
 
 jobs:
