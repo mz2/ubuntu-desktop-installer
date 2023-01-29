@@ -23,7 +23,8 @@ quickemu --vm kinetic.conf --display spice
 
 echo "Starting sikulix"
 
-java -jar $SIKULIX_JAR -r installer-automation.sikuli
+java -jar $SIKULIX_JAR -r initialize.sikuli
+# java -jar $SIKULIX_JAR -r installer-automation.sikuli
 SIKULI_EXIT = $?
 
 echo "Finished sikulix"

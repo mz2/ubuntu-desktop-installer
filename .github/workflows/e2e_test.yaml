@@ -5,6 +5,22 @@ on:
     branches:
       - main
 
+defaults:
+  run:
+    shell: bash
+    working-directory: test
+
 jobs:
   e2e-test:
     runs-on: self-hosted
+    steps:
+      - name: Symlink the iso to use in.
+        run: ln -s ~/Developer/iso/kinetic-desktop-canary-amd64.iso .
+      
+      - name: Copy spice config in place
+        run: cp spicy-settings ~/.config/spicy/settings 
+      
+      - name: Run the automation
+        run: ./bin/install-kinetic.sh
+        env:
+          SIKULIX_JAR: $HOME/java/lib/sikulixide.jar
