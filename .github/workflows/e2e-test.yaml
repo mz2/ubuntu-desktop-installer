@@ -31,4 +31,4 @@ jobs:
       - name: Run the automation
         run: ./bin/install-kinetic.sh
         env:
-          SIKULIX_JAR: $HOME/java/lib/sikulixide.jar
+          SIKULIX_JAR: /home/mz2/java/lib/sikulixide.jar
