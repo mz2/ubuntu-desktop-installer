@@ -1,9 +1,6 @@
 name: e2e-test
 
-on:
-  pull_request:
-    branches:
-      - main
+on: pull_request
 
 defaults:
   run:
