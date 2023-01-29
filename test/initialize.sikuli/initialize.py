@@ -15,5 +15,5 @@ type("1024")
 
 click("1674913542390.png")
 
-screen.findText("Options").click()
-screen.findText("Resize guest to match window size").click()
+#screen.findText("Options").click()
+#screen.findText("Resize guest to match window size").click()
