@@ -17,6 +17,11 @@ jobs:
   e2e-test:
     runs-on: self-hosted
     steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
       - name: Symlink the iso to use in.
         run: ln -s ~/Developer/iso/kinetic-desktop-canary-amd64.iso .
       
