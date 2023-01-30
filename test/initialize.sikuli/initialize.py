@@ -3,10 +3,12 @@ screen = Screen()
 opts = OCR.Options()
 opts.textHeight(22)
 
-screen.findText("Options").click()
+click("options.png")
+# screen.findText("Options").click()
 click("scale_display.png")
 
-screen.findText("Options").click()
+click("options.png")
+# screen.findText("Options").click()
 click("resize_guest.png")
 
 

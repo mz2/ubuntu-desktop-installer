@@ -28,7 +28,7 @@ jobs:
       - name: Copy spice config in place
         run: cp spicy-settings ~/.config/spicy/settings 
       
-      - name: Run the automation
-        run: ./bin/install-kinetic.sh
+      - name: Run the Lunar installer automation
+        run: ./bin/install-lunar.sh
         env:
           SIKULIX_JAR: /home/mz2/java/lib/sikulixide.jar
