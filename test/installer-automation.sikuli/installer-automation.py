@@ -1,6 +1,6 @@
 # wait("install_ubuntu.png")
 
-wait("english.png", 30)
+wait("english.png", 90)
 
 click("continue.png")
 click("1663606007708.png")
@@ -20,7 +20,7 @@ click("1675066774477.png")
 click("continue.png")
 wait("1660739976913.png")
 click("start_installing.png")
-wait( "where_are_you.png")
+wait("where_are_you.png")
 click("continue.png")
 
 assert "disabled_continue.png"
@@ -42,7 +42,7 @@ click("1660732681771.png")
 type("herptyderp")
 click("continue.png")
 
-#assert "copying_files.png"
+# assert "copying_files.png"
 wait("installation_complete.png", 1800)
 # click("restart_into_ubuntu.png")
 click("1660759005575.png")
