@@ -23,7 +23,7 @@ jobs:
           submodules: recursive
 
       - name: Symlink the iso to use in.
-        run: ln -s ~/Developer/iso/kinetic-desktop-canary-amd64.iso .
+        run: ln -s ~/Developer/iso/lunar-desktop-amd64.iso .
       
       - name: Copy spice config in place
         run: cp spicy-settings ~/.config/spicy/settings 
