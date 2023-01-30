@@ -1,7 +1,6 @@
 screen = Screen()
 
 opts = OCR.Options()
-
 opts.textHeight(22)
 # textHeight(Offset(76, 25)
 
@@ -15,6 +14,12 @@ type("1080")
 
 click("1674913542390.png")
 
-screen.findText("Options").click()
-screen.findText("Scale display").click()
+#screen.findText("Options").click()
+#click("1675065478360.png")
+
+#screen.findText("Options").click()
+#click("1675065666811.png")
+
+#wait(3600)
+# screen.findText("Scale display").click()
 #screen.findText("Resize guest to match window size").click()

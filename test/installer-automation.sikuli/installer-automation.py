@@ -1,15 +1,6 @@
-# findText("Try or install Ubuntu")
-#wait("try_or_install_ubuntu.png", 1800)
+# wait("install_ubuntu.png")
 
-# assert "ubuntu_safe_graphics.png"
-#type(Key.DOWN)
-#type(Key.ENTER)
-
-# wait("jammy_jellyfish.png", 1800)
-# wait("installer_panel_icon.png", 1800)
-# click("installer_panel_icon.png")
-
-wait("install_ubuntu.png", 1800)
+wait("english.png", 30)
 
 click("continue.png")
 click("1663606007708.png")
@@ -19,21 +10,17 @@ click("type_here.png")
 type("dogflap")
 click("continue.png")
 
-#assert "use_wired_connection.png"
+click("1675066734616.png")
 click("continue.png")
 
-# assert "normal_installation.png"
-click("minimal_installation.png")
+click("1675066757916.png")
 click("continue.png")
 
-#assert "erase_disk.png"
+click("1675066774477.png")
 click("continue.png")
-
-#assert "write_changes_to_disk.png"
-
-wait("1660739976913.png", 1800)
+wait("1660739976913.png")
 click("start_installing.png")
-assert "where_are_you.png"
+wait( "where_are_you.png")
 click("continue.png")
 
 assert "disabled_continue.png"
@@ -63,4 +50,4 @@ click("1660759005575.png")
 # findText("Please remove the installation medium, then press ENTER")
 wait("1660758282205.png", 1800)
 # wait("please_remove_installation_medium.png", 1800)
-type(Key.ENTER)
+# type(Key.ENTER)

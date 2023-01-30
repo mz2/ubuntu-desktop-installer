@@ -23,13 +23,22 @@ quickemu --vm kinetic.conf --display spice
 
 echo "Starting sikulix"
 
+echo "Setting up display"
 java -jar $SIKULIX_JAR -r initialize.sikuli
+sleep 5
+
+echo "Boot menu..."
+java -jar $SIKULIX_JAR -r boot-menu.sikuli
+sleep 5
+
+echo "Installer..."
+java -jar $SIKULIX_JAR -r installer-automation.sikuli
 # java -jar $SIKULIX_JAR -r installer-automation.sikuli
 SIKULI_EXIT=$?
 
 echo "Finished sikulix"
 
 set e pipefail
-killall qemu-system-x86_64 || /bin/true
+killall kinetic || /bin/true
 
 exit $SIKULI_EXIT
