@@ -48,7 +48,7 @@ click("continue.png")
 wait("installation_complete.png", 1800)
 # wait("is-installed-and-ready-to-use.png", 1800)
 
-click("shut_down.png")
+click(Pattern("shut_down.png").similar(0.53))
 
 # findText("Please remove the installation medium, then press ENTER")
 wait("remove_installation_medium.png", 60)
