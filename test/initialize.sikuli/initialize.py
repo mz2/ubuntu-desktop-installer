@@ -15,10 +15,10 @@ type("1080")
 click("1674913542390.png")
 
 #screen.findText("Options").click()
-#click("1675065478360.png")
+click("1675065478360.png")
 
-#screen.findText("Options").click()
-#click("1675065666811.png")
+screen.findText("Options").click()
+click("1675065666811.png")
 
 #wait(3600)
 # screen.findText("Scale display").click()
