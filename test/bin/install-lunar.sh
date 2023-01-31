@@ -33,8 +33,27 @@ sleep 5
 
 echo "Installer..."
 java -jar $SIKULIX_JAR -r gnome-first-run.sikuli
-java -jar $SIKULIX_JAR -r lunar-installer-automation.sikuli
-# java -jar $SIKULIX_JAR -r installer-automation.sikuli
+java -jar $SIKULIX_JAR -r lunar-installer-until-partitioning.sikuli
+java -jar $SIKULIX_JAR -r lvm-with-encryption.sikuli
+java -jar $SIKULIX_JAR -r start-installing.sikuli
+java -jar $SIKULIX_JAR -r lunar-installer-after-partitioning.sikuli
+
+echo "Check post-install state"
+killall -9 lunar || /bin/true
+sleep 5
+
+quickemu --vm lunar.conf --display spice
+java -jar $SIKULIX_JAR -r post-install-boot-menu.sikuli
+sleep 5
+
+killall -9 lunar || /bin/true
+sleep 5
+
+quickemu --vm lunar.conf --display spice
+java -jar $SIKULIX_JAR -r post-install-boot-menu-with-ubuntu.sikuli
+java -jar $SIKULIX_JAR -r enter-encryption-passphrase.sikuli
+java -jar $SIKULIX_JAR -r lunar-post-install.sikuli
+
 SIKULI_EXIT=$?
 
 echo "Finished sikulix"

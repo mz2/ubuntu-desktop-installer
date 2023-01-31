@@ -1,0 +1,6 @@
+wait("grub.png", 60)
+click("grub.png")
+type(Key.DOWN)
+type(Key.DOWN)
+type(Key.DOWN)
+type(Key.ENTER)
