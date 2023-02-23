@@ -1,6 +1,6 @@
 from ../installer partitioner import Partitioner
 
-import shlib
+import shutil
 
 try:
     click("something_else.png")
@@ -46,8 +46,7 @@ try:
     click("1675149621593.png")
 
 except:
-screen = Screen()
-
+    screen = Screen()
     screenshot = screen.capture(screen.getBounds())
     screenshot.save("./", "screenshot.png")
     exit(-1)

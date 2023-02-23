@@ -1,4 +1,4 @@
-import shlib
+import shutil
 
 try:
     click("1675153496948.png")

@@ -1,4 +1,4 @@
-import shlib
+import shutil
 
 try:
     wait("grub.png", 60)

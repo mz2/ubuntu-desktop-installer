@@ -1,4 +1,4 @@
-import shlib
+import shutil
 
 try:
     click("start_installing.png")

@@ -1,4 +1,4 @@
-import shlib
+import shutil
 
 try:
     wait("where_are_you.png")

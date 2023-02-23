@@ -1,4 +1,4 @@
-import shlib
+import shutil
 
 try:
     wait("1675167311690.png", 60)
