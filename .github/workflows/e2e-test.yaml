@@ -17,15 +17,15 @@ jobs:
   e2e-test:
     runs-on: self-hosted
     steps:
-      - name: Get job ID URL
-        uses: Tiryoh/gha-jobid-action@v0
-        id: job_id
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          job_name: ${{ github.job }}
+      #- name: Get job ID URL
+      #  uses: Tiryoh/gha-jobid-action@v0
+      #  id: job_id
+      #  with:
+      #    github_token: ${{ secrets.GITHUB_TOKEN }}
+      #    job_name: ${{ github.job }}
       
-      - name: Output Current Job Log URL
-        run: echo ${{ steps.jobs.outputs.html_url }}
+      #- name: Output Current Job Log URL
+      #  run: echo ${{ steps.jobs.outputs.html_url }}
     
       - name: Git checkout
         uses: actions/checkout@v2
@@ -58,12 +58,15 @@ jobs:
         with:
           name: failing-screenshot
           path: test/screenshot.png
-          
+      
+      - name: Construct the run URL
+        run: echo "run_url=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" >> $GITHUB_OUTPUT
+        id: run_url
+
       - uses: JasonEtco/create-an-issue@v2
         if: steps.screenshot_check.outputs.screenshot_present == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          JOB_ID: ${{ steps.job_id.outputs.job_id }}
-          HTML_URL: ${{ steps.job_id.outputs.html_url }}
+          RUN_URL: ${{ steps.run_url.outputs.run_url }}
         with:
           filename: .github/ISSUE_TEMPLATE/e2e-test-fail.md
