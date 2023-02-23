@@ -51,6 +51,13 @@ jobs:
           else
             echo "screenshot_present=false" >> $GITHUB_OUTPUT
           fi
+      
+      - name: Archive failing screenshot
+        uses: actions/upload-artifact@v3
+        if: steps.screenshot_check.outputs.screenshot_present == 'true'
+        with:
+          name: archive-failing-screenshot
+          path: test/screenshot.png
           
       - uses: JasonEtco/create-an-issue@v2
         if: steps.screenshot_check.outputs.screenshot_present == 'true'
@@ -58,3 +65,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JOB_ID: ${{ steps.job_id.outputs.job_id }}
           HTML_URL: ${{ steps.job_id.outputs.html_url }}
+        with:
+          filename: .github/e2e-fail-issue-template.md  
