@@ -4,4 +4,4 @@ title: Test run failed
 #labels: bug, e2e
 ---
 
-Oh no! {{ env.JOB_ID }} ({{ env.HTML_URL }}).
+Oh no!
