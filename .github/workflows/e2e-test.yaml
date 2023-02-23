@@ -66,4 +66,4 @@ jobs:
           JOB_ID: ${{ steps.job_id.outputs.job_id }}
           HTML_URL: ${{ steps.job_id.outputs.html_url }}
         with:
-          filename: .github/e2e-test-fail.md
+          filename: .github/ISSUE_TEMPLATE/e2e-test-fail.md
