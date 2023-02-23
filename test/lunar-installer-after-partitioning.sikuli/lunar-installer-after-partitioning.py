@@ -2,21 +2,21 @@ wait("where_are_you.png")
 click("continue.png")
 
 wait("disabled_continue.png")
-click("your_name_placeholder.png")
+click("1676326058165.png")
 type("Dustin Henderson")
-click(Pattern("your-computer-name.png").targetOffset(-26,25))
+click(Pattern("1676326082146.png").targetOffset(-11,19))
 type("a", Key.CTRL)
 
 type("Falkor")
 
-click("username_dustin_henderson.png")
+click(Pattern("1676326124343.png").targetOffset(-8,17))
 type("a", Key.CTRL)
 type("dustin")
 
-click("choose_password.png")
+click("1676326150218.png")
 type("herptyderp")
 
-click("confirm_your_password.png")
+click("1676326159422.png")
 type("herptyderp")
 
 click("require-my-password-to-login.png")

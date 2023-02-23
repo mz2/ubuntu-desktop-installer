@@ -5,6 +5,7 @@
 - [SikuliX](https://launchpad.net/sikuli/sikulix/2.0.5/+download/sikulixide-2.0.5.jar) available at a point pointed at by $SIKULIX_JAR
 - libopencv-core4.5d
 - libtesseract4
+- `apt install xdotool wmctrl`
 
 ## Running instructions
 
