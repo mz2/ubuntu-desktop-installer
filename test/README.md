@@ -23,6 +23,7 @@ sudo apt install openjdk-11-jre-headless
 sudo apt install libopencv-core406
 ```
 
+- Self-hosted GitHub runner installation steps: https://docs.github.com/en/actions/hosting-your-own-runners/configuring-the-self-hosted-runner-application-as-a-service
 
 ## Running instructions
 
