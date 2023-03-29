@@ -31,7 +31,7 @@ jobs:
       - name: Run the Lunar installer automation
         run: ./bin/install-lunar.sh
         env:
-          SIKULIX_JAR: /home/mz2/java/lib/sikulixide.jar
+          SIKULIX_JAR: ~/java/lib/sikulixide.jar
 
       - name: Check for presence of test/screenshot.png
         id: screenshot_check
