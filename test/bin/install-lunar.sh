@@ -3,18 +3,19 @@
 set -e pipefail
 
 if [ -f ./vm/lunar.qcow2 ]; then
-  echo "kinetic VM already exists at ./vm/lunar.qcow2. Remove it and try again."
+  echo "lunar VM already exists at ./vm/lunar.qcow2. Remove it and try again."
   exit 1
 fi
 
 if [ ! -f ./lunar-desktop-amd64.iso ]; then
-  echo "Missing ./kinetic-desktop-canary-amd64.iso (symlink it in, please, and try again)."
+  echo "Missing ./lunar-desktop-canary-amd64.iso (symlink it in, please, and try again)."
   exit 1
 fi
 
 if [ -z "${SIKULIX_JAR}" ]; then
   echo "Missing 'SIKULIX_JAR' environment variable (point it at your sikulixide jar, please, and try again)."
-  exit 1
+  echo "export SIKULIX_JAR=~/java/lib/sikulixide.jar "
+  export SIKULIX_JAR=~/java/lib/sikulixide.jar 
 fi 
 
 mkdir -p vm
