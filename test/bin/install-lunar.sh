@@ -3,7 +3,7 @@
 set -e pipefail
 
 if [ -f ./vm/lunar.qcow2 ]; then
-  echo "kinetic VM already exists at ./vm/kinetic.qcow2. Remove it and try again."
+  echo "kinetic VM already exists at ./vm/lunar.qcow2. Remove it and try again."
   exit 1
 fi
 
