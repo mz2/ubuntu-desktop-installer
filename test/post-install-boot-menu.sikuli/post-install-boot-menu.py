@@ -5,7 +5,6 @@ try:
     click("grub.png")
     type(Key.DOWN)
     type(Key.DOWN)
-    type(Key.DOWN)
     type(Key.ENTER)
 
 except:

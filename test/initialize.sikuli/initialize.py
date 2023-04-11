@@ -25,7 +25,6 @@ try:
     type("1080")
 
     click("apply.png")
-
 except:
     screenshot = screen.capture(screen.getBounds())
     screenshot.save("./", "screenshot.png")

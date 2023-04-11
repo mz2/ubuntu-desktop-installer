@@ -1,11 +1,13 @@
 import shutil
 
 try:
-    wait("where_are_you.png")
-    click("continue.png")
+    wait("select_your_timezone.png")
 
-    wait("disabled_continue.png")
-    click("1676326058165.png")
+    sleep(2)
+    click("next.png")
+
+    
+    click(Pattern("your_name.png").targetOffset(0,15))
     type("Dustin Henderson")
     click(Pattern("1676326082146.png").targetOffset(-11, 19))
     type("a", Key.CTRL)
@@ -23,15 +25,14 @@ try:
     type("herptyderp")
 
     click("require-my-password-to-login.png")
-    click("continue.png")
+    click("next.png")
     wait("light-mode.png")
     click("light-mode.png")
-    click("continue.png")
+    click("next.png")
 
-    wait("installation_complete.png", 1800)
-    # wait("is-installed-and-ready-to-use.png", 1800)
+    wait("restart_now.png", 1800)
 
-    click(Pattern("shut_down.png").similar(0.53))
+    click("restart_now.png")
 
     # findText("Please remove the installation medium, then press ENTER")
     wait("remove_installation_medium.png", 60)
