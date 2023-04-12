@@ -31,7 +31,7 @@ jobs:
       - name: Run the Lunar installer automation (blank starting point -> Ubuntu installed on its own)
         run: ./bin/install-lunar.sh blank
         env:
-          SIKULIX_JAR: ~/java/lib/sikulixide.jar
+          SIKULIX_JAR: $HOME/java/lib/sikulixide.jar
 
       - name: Check for presence of test/screenshot.png
         id: screenshot_check
