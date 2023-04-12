@@ -24,12 +24,12 @@ jobs:
 
       - name: Symlink the iso to use in.
         run: ln -s ~/images/lunar-desktop-amd64.iso .
-      
+
       - name: Copy spice config in place
-        run: cp spicy-settings ~/.config/spicy/settings 
-      
-      - name: Run the Lunar installer automation
-        run: ./bin/install-lunar.sh
+        run: cp spicy-settings ~/.config/spicy/settings
+
+      - name: Run the Lunar installer automation (blank starting point -> Ubuntu installed on its own)
+        run: ./bin/install-lunar.sh blank
         env:
           SIKULIX_JAR: ~/java/lib/sikulixide.jar
 
@@ -41,14 +41,14 @@ jobs:
           else
             echo "screenshot_present=false" >> $GITHUB_OUTPUT
           fi
-      
+
       - name: Archive failing screenshot
         uses: actions/upload-artifact@v3
         if: steps.screenshot_check.outputs.screenshot_present == 'true'
         with:
           name: failing-screenshot
           path: test/screenshot.png
-      
+
       - name: Construct the run URL
         run: echo "run_url=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" >> $GITHUB_OUTPUT
         id: run_url
