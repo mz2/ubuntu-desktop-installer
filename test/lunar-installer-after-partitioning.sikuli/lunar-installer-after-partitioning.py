@@ -30,7 +30,7 @@ try:
     click("light-mode.png")
     click("next.png")
 
-    wait("restart_now.png", 1800)
+    wait("restart_now.png", 3800)
 
     click("restart_now.png")
 

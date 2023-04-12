@@ -3,9 +3,6 @@ import shutil
 screen = Screen()
 
 try:
-    opts = OCR.Options()
-    opts.textHeight(22)
-
     click("options.png")
     # screen.findText("Options").click()
     click("scale_display.png")

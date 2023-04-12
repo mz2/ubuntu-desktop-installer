@@ -49,7 +49,6 @@ try:
     click("continue.png")
 
     wait("installation_complete.png", 1800)
-    # wait("is-installed-and-ready-to-use.png", 1800)
 
     click(Pattern("shut_down.png").similar(0.53))
 
